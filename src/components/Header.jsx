@@ -20,8 +20,8 @@ export default function Header() {
       <div className="bg-ink/95 backdrop-blur text-paper border-b border-white/5">
         <nav className="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <img src="/logo.png" alt="شقو" className="h-11 w-11 rounded-full object-cover" />
-            <span className="font-display font-bold text-xl tracking-tight">شقو</span>
+            <img src="/logo.png" alt="شق شوز" className="h-11 w-11 rounded-full object-cover" />
+            <span className="font-display font-bold text-xl tracking-tight">شق شوز</span>
           </a>
 
           <ul className="hidden md:flex items-center gap-8 text-sm text-paper/80">

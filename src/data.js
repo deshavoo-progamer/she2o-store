@@ -1,7 +1,10 @@
 // كل البيانات اللي ممكن تتغير موجودة هنا — عدّلها من غير ما تلمس باقي الكود
 
 // رقم الواتساب بالصيغة الدولية من غير + (مثال: 201012345678)
-export const WHATSAPP_NUMBER = '201000000000'
+export const WHATSAPP_NUMBER = '201062257700'
+
+// أرقام التليفون اللي بتظهر في الفوتر
+export const PHONES = ['01062257700', '01555787337']
 
 export const social = {
   instagram: 'https://instagram.com/',

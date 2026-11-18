@@ -14,7 +14,7 @@ export default function Hero() {
           <h1 className="font-display font-extrabold leading-[1.15] text-[2.5rem] sm:text-5xl lg:text-[3.6rem]">
             خطوتك اللي جاية
             <br />
-            <span className="text-teal">شقو.</span>
+            <span className="text-teal">شق شوز.</span>
           </h1>
 
           <p className="mt-6 text-paper/70 text-lg leading-relaxed max-w-md">
@@ -39,7 +39,7 @@ export default function Hero() {
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
             <img
               src="/cover.jpg"
-              alt="كوتشي شقو في شارع في وسط البلد"
+              alt="كوتشي شق شوز في شارع في وسط البلد"
               className="absolute inset-0 h-full w-full object-cover object-[76%_center]"
             />
             <div className="absolute inset-x-0 bottom-0 h-1.5 flex">
