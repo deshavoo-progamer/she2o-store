@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import { whatsappLink } from '../whatsapp.js'
 
 const links = [
-  { href: '#models', label: 'الموديلات' },
-  { href: '#real', label: 'صور على الطبيعة' },
-  { href: '#sizes', label: 'اعرف مقاسك' },
-  { href: '#faq', label: 'عندك سؤال؟' },
+  { href: '/#models', label: 'الموديلات' },
+  { href: '/#real', label: 'صور على الطبيعة' },
+  { href: '/#sizes', label: 'اعرف مقاسك' },
+  { href: '/#faq', label: 'عندك سؤال؟' },
 ]
 
-export default function Header() {
+export default function Header({ cartCount, cairoFree }) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -18,18 +17,17 @@ export default function Header() {
         document.getElementById('menu-toggle')?.focus()
       }
     }}>
-      <div className="announcement">التوصيل ببلاش جوّه القاهرة <span aria-hidden="true">◆</span> ادفع لما تستلم</div>
+      <div className="announcement">{cairoFree && <>التوصيل ببلاش جوّه القاهرة <span aria-hidden="true">◆</span> </>}ادفع لما تستلم</div>
       <div className="nav-background">
         <nav className="shell header-nav" aria-label="قائمة الموقع">
-          <a href="#top" className="brand" aria-label="شقّو، ارجع لأول الصفحة" onClick={() => setOpen(false)}>
-            <img src="/shaqo-logo.png" width="72" height="72" alt="" />
-            <span>شقّو</span>
+          <a href="/#top" className="brand" aria-label="شقّو، ارجع لأول الصفحة" onClick={() => setOpen(false)}>
+            <img src="/shaqo-mark.png" width="98" height="72" alt="" />
           </a>
           <ul className="desktop-links">
             {links.map(({ href, label }) => <li key={href}><a href={href}>{label}</a></li>)}
           </ul>
-          <a className="button button-outline header-cta" href={whatsappLink()} target="_blank" rel="noreferrer">
-            كلمنا على واتساب <span aria-hidden="true">↗</span>
+          <a className="button button-lime header-cart" href="/cart">
+            السلة <span className="cart-count">{cartCount}</span>
           </a>
           <button
             id="menu-toggle"

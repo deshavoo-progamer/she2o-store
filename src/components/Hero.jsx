@@ -1,11 +1,9 @@
-import { whatsappLink } from '../whatsapp.js'
-
 export default function Hero() {
   return (
     <section id="top" className="hero" aria-labelledby="hero-title">
       <img
-        src="/shaqo-hero-1440.jpg"
-        srcSet="/shaqo-hero-800.jpg 800w, /shaqo-hero-1440.jpg 1440w, /shaqo-hero-1920.jpg 1920w"
+        src="/street-hero-1440.jpg"
+        srcSet="/street-hero-800.jpg 800w, /street-hero-1440.jpg 1440w, /street-hero-1920.jpg 1920w"
         sizes="100vw"
         alt=""
         fetchPriority="high"
@@ -17,13 +15,13 @@ export default function Hero() {
             <span className="hero-line">خلّي خطوتك</span>{' '}
             <span className="hero-line hero-line-accent">تتشاف.</span>
           </h1>
-          <p>رانر، سكيت ولا دانك؟ اختار الكوتشي اللي شبهك، من مقاس 41 لـ 45.</p>
+          <p>رانر، سكيت ولا دانك؟ اختار الكوتشي اللي شبهك واطلبه من هنا.</p>
           <div className="hero-actions">
-            <a className="button button-orange" href="#models">
+            <a className="button button-lime" href="#models">
               شوف الموديلات <span aria-hidden="true">↙</span>
             </a>
-            <a className="button button-outline" href={whatsappLink()} target="_blank" rel="noreferrer">
-              اطلب على واتساب <span aria-hidden="true">↗</span>
+            <a className="button button-outline" href="#real">
+              شوفها على الطبيعة <span aria-hidden="true">↙</span>
             </a>
           </div>
         </div>

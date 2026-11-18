@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
-import { whatsappLink } from '../whatsapp.js'
 
-export default function MobileBar() {
+export default function MobileBar({ cartCount }) {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -17,8 +16,8 @@ export default function MobileBar() {
 
   return (
     <div className="mobile-bar" hidden={!visible}>
-      <a className="button button-orange" href="#models">شوف الموديلات</a>
-      <a className="button button-outline" href={whatsappLink()} target="_blank" rel="noreferrer">اطلب على واتساب</a>
+      <a className="button button-lime" href="#models">شوف الموديلات</a>
+      <a className="button button-outline" href="/cart">شوف السلة ({cartCount})</a>
     </div>
   )
 }

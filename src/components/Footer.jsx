@@ -5,9 +5,8 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="shell footer-inner">
-        <a href="#top" className="brand" aria-label="شقّو، ارجع لأول الصفحة">
-          <img src="/shaqo-logo.png" alt="" width="84" height="84" loading="lazy" />
-          <span>شقّو</span>
+        <a href="/#top" className="brand" aria-label="شقّو، ارجع لأول الصفحة">
+          <img src="/shaqo-mark.png" alt="" width="115" height="84" loading="lazy" />
         </a>
         <div className="footer-contact">
           <h2>كلمنا</h2>

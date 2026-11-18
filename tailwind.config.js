@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#1d1b27',
-        paper: '#faeed4',
-        grape: '#3c064c',
-        flame: '#ff7a00',
+        ink: '#000000',
+        paper: '#fdeed4',
+        red: '#fc443c',
+        lime: '#cdf603',
       },
       fontFamily: {
         display: ['Alexandria', 'system-ui', 'sans-serif'],
