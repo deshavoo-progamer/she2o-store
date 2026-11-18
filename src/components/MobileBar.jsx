@@ -1,18 +1,24 @@
-import { minPrice } from '../data.js'
+import { useEffect, useState } from 'react'
+import { whatsappLink } from '../whatsapp.js'
 
 export default function MobileBar() {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const hero = document.getElementById('top')
+    if (!hero || !('IntersectionObserver' in window)) return
+
+    const observer = new IntersectionObserver(([entry]) => {
+      setVisible(entry.boundingClientRect.bottom <= 0)
+    })
+    observer.observe(hero)
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-paper/95 backdrop-blur border-t border-ink/10 px-4 py-3 flex items-center justify-between gap-4">
-      <div className="text-sm leading-tight">
-        <p className="font-display font-semibold">توصيل مجاني في القاهرة</p>
-        <p className="text-ink/60">تبدأ من {minPrice} ج.م</p>
-      </div>
-      <a
-        href="#models"
-        className="inline-flex items-center h-11 px-6 rounded-full bg-flame text-ink text-sm font-semibold"
-      >
-        شوف الموديلات
-      </a>
+    <div className="mobile-bar" hidden={!visible}>
+      <a className="button button-orange" href="#models">شوف الموديلات</a>
+      <a className="button button-outline" href={whatsappLink()} target="_blank" rel="noreferrer">اطلب على واتساب</a>
     </div>
   )
 }

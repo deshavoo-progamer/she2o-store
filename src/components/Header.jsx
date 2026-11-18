@@ -3,75 +3,52 @@ import { whatsappLink } from '../whatsapp.js'
 
 const links = [
   { href: '#models', label: 'الموديلات' },
-  { href: '#real', label: 'صور حقيقية' },
-  { href: '#sizes', label: 'المقاسات' },
-  { href: '#faq', label: 'أسئلة' },
+  { href: '#real', label: 'صور على الطبيعة' },
+  { href: '#sizes', label: 'اعرف مقاسك' },
+  { href: '#faq', label: 'عندك سؤال؟' },
 ]
 
 export default function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40">
-      <div className="bg-flame text-ink text-center text-[13px] font-medium py-2 px-4">
-        توصيل مجاني جوه القاهرة — والدفع عند الاستلام
-      </div>
-
-      <div className="bg-ink/95 backdrop-blur text-paper border-b border-white/5">
-        <nav className="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-3">
-            <img src="/logo.png" alt="شق شوز" className="h-11 w-11 rounded-full object-cover" />
-            <span className="font-display font-bold text-xl tracking-tight">شق شوز</span>
+    <header className="site-header" onKeyDown={(event) => {
+      if (event.key === 'Escape' && open) {
+        setOpen(false)
+        document.getElementById('menu-toggle')?.focus()
+      }
+    }}>
+      <div className="announcement">التوصيل ببلاش جوّه القاهرة <span aria-hidden="true">◆</span> ادفع لما تستلم</div>
+      <div className="nav-background">
+        <nav className="shell header-nav" aria-label="قائمة الموقع">
+          <a href="#top" className="brand" aria-label="شقّو، ارجع لأول الصفحة" onClick={() => setOpen(false)}>
+            <img src="/shaqo-logo.png" width="72" height="72" alt="" />
+            <span>شقّو</span>
           </a>
-
-          <ul className="hidden md:flex items-center gap-8 text-sm text-paper/80">
-            {links.map((l) => (
-              <li key={l.href}>
-                <a href={l.href} className="hover:text-teal transition-colors">
-                  {l.label}
-                </a>
-              </li>
+          <ul className="desktop-links">
+            {links.map(({ href, label }) => <li key={href}><a href={href}>{label}</a></li>)}
+          </ul>
+          <a className="button button-outline header-cta" href={whatsappLink()} target="_blank" rel="noreferrer">
+            كلمنا على واتساب <span aria-hidden="true">↗</span>
+          </a>
+          <button
+            id="menu-toggle"
+            className="menu-toggle"
+            type="button"
+            aria-label={open ? 'اقفل القائمة' : 'افتح القائمة'}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
+            onClick={() => setOpen(value => !value)}
+          >
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+          </button>
+          <ul id="mobile-navigation" className="mobile-navigation" hidden={!open}>
+            {links.map(({ href, label }) => (
+              <li key={href}><a href={href} onClick={() => setOpen(false)}>{label} <span aria-hidden="true">←</span></a></li>
             ))}
           </ul>
-
-          <div className="flex items-center gap-2">
-            <a
-              href={whatsappLink()}
-              target="_blank"
-              rel="noreferrer"
-              className="hidden sm:inline-flex items-center h-10 px-5 rounded-full bg-teal text-ink text-sm font-semibold hover:bg-paper transition-colors"
-            >
-              كلمنا واتساب
-            </a>
-            <button
-              onClick={() => setOpen((v) => !v)}
-              className="md:hidden h-10 w-10 grid place-items-center"
-              aria-label="القائمة"
-              aria-expanded={open}
-            >
-              <span className="relative block h-3 w-5">
-                <span className={`absolute inset-x-0 top-0 h-0.5 bg-paper transition ${open ? 'translate-y-[5px] rotate-45' : ''}`} />
-                <span className={`absolute inset-x-0 bottom-0 h-0.5 bg-paper transition ${open ? '-translate-y-[5px] -rotate-45' : ''}`} />
-              </span>
-            </button>
-          </div>
         </nav>
-
-        {open && (
-          <ul className="md:hidden border-t border-white/5 px-4 py-2">
-            {links.map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="block py-3 text-paper/90 border-b border-white/5 last:border-0"
-                >
-                  {l.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
     </header>
   )
