@@ -1,8 +1,8 @@
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Perks from './components/Perks.jsx'
-import Product from './components/Product.jsx'
-import Story from './components/Story.jsx'
+import Products from './components/Products.jsx'
+import RealShots from './components/RealShots.jsx'
 import SizeGuide from './components/SizeGuide.jsx'
 import Faq from './components/Faq.jsx'
 import Footer from './components/Footer.jsx'
@@ -15,8 +15,8 @@ export default function App() {
       <main>
         <Hero />
         <Perks />
-        <Product />
-        <Story />
+        <Products />
+        <RealShots />
         <SizeGuide />
         <Faq />
       </main>

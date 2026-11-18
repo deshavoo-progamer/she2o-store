@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { whatsappLink } from '../whatsapp.js'
 
 const links = [
-  { href: '#model', label: 'الموديل' },
-  { href: '#story', label: 'عن شقو' },
+  { href: '#models', label: 'الموديلات' },
+  { href: '#real', label: 'صور حقيقية' },
   { href: '#sizes', label: 'المقاسات' },
   { href: '#faq', label: 'أسئلة' },
 ]
@@ -13,21 +13,21 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40">
-      <div className="bg-rust text-paper text-center text-[13px] py-2 px-4">
-        الدفع عند الاستلام — وشحن لكل محافظات مصر
+      <div className="bg-flame text-ink text-center text-[13px] font-medium py-2 px-4">
+        توصيل مجاني جوه القاهرة — والدفع عند الاستلام
       </div>
 
       <div className="bg-ink/95 backdrop-blur text-paper border-b border-white/5">
         <nav className="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <img src="/logo.jpg" alt="شقو" className="h-10 w-10 rounded-full object-cover" />
+            <img src="/logo.png" alt="شقو" className="h-11 w-11 rounded-full object-cover" />
             <span className="font-display font-bold text-xl tracking-tight">شقو</span>
           </a>
 
           <ul className="hidden md:flex items-center gap-8 text-sm text-paper/80">
             {links.map((l) => (
               <li key={l.href}>
-                <a href={l.href} className="hover:text-sand transition-colors">
+                <a href={l.href} className="hover:text-teal transition-colors">
                   {l.label}
                 </a>
               </li>
@@ -39,9 +39,9 @@ export default function Header() {
               href={whatsappLink()}
               target="_blank"
               rel="noreferrer"
-              className="hidden sm:inline-flex items-center h-10 px-5 rounded-full bg-sand text-ink text-sm font-semibold hover:bg-paper transition-colors"
+              className="hidden sm:inline-flex items-center h-10 px-5 rounded-full bg-teal text-ink text-sm font-semibold hover:bg-paper transition-colors"
             >
-              اطلب دلوقتي
+              كلمنا واتساب
             </a>
             <button
               onClick={() => setOpen((v) => !v)}

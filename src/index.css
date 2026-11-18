@@ -7,16 +7,10 @@ html {
 }
 
 body {
-  background: #f4efe6;
-  color: #1d2630;
+  background: #f2f3f1;
+  color: #181c1f;
   font-family: "IBM Plex Sans Arabic", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
-}
-
-/* crops of the cover photo used as product shots */
-.crop {
-  background-image: url("/cover.jpg");
-  background-repeat: no-repeat;
 }
 
 details > summary {

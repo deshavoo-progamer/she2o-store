@@ -8,15 +8,15 @@ export default function SizeGuide() {
           <h2 className="font-display font-bold text-3xl">تعرف مقاسك إزاي؟</h2>
           <ol className="mt-6 space-y-4 text-ink/70 leading-relaxed">
             <li className="flex gap-3">
-              <span className="font-display text-rust">1</span>
+              <span className="font-display text-flame-dark">1</span>
               حط ورقة على الأرض جنب الحيطة، واقف عليها وكعبك لازق في الحيطة.
             </li>
             <li className="flex gap-3">
-              <span className="font-display text-rust">2</span>
+              <span className="font-display text-flame-dark">2</span>
               علّم بالقلم عند آخر صباع في رجلك.
             </li>
             <li className="flex gap-3">
-              <span className="font-display text-rust">3</span>
+              <span className="font-display text-flame-dark">3</span>
               قيس المسافة بالسنتي وقارنها بالجدول. لو بين مقاسين خد الأكبر.
             </li>
           </ol>
