@@ -118,15 +118,16 @@ export function createApi(env = process.env) {
   }
 
   transaction(() => {
-    if (!db.prepare('INSERT OR IGNORE INTO settings VALUES (?)').run('seed-v1').changes) return
+    if (!db.prepare('INSERT OR IGNORE INTO settings VALUES (?)').run('catalog-sh-50').changes) return
+    db.exec("DELETE FROM products WHERE id IN ('runner-black','runner-white','skate-black','skate-brown','dunk-navy','dunk-cream')")
     for (const product of products) {
       writeProduct({
-        ...product, price: product.price == null ? null : product.price * 100, description: '',
-        image: `/products/${product.id}-studio.jpg`, active: true, revision: 1,
+        ...product, price: null, description: '',
+        image: `/products/${product.id}.webp`, active: true, revision: 1,
         stock: Object.fromEntries(SIZES.map(size => [size, 0])),
       })
     }
-    db.prepare('INSERT INTO shipping VALUES (?, ?)').run('القاهرة', 0)
+    if (db.prepare('INSERT OR IGNORE INTO settings VALUES (?)').run('seed-v1').changes) db.prepare('INSERT INTO shipping VALUES (?, ?)').run('القاهرة', 0)
   })
 
   function rateLimit(key, limit, duration) {

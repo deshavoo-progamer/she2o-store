@@ -20,9 +20,6 @@ export default function Hero() {
             <a className="button button-lime" href="#models">
               شوف الموديلات <span aria-hidden="true">↙</span>
             </a>
-            <a className="button button-outline" href="#real">
-              شوفها على الطبيعة <span aria-hidden="true">↙</span>
-            </a>
           </div>
         </div>
       </div>

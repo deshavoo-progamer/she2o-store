@@ -14,24 +14,57 @@ export const social = {
 
 export const SIZES = [41, 42, 43, 44, 45]
 
-// الصور في public/products — لو عندك نسخة أكبر من أي صورة حطها بنفس الاسم
-// price: null يعني السعر هيتقال على الواتساب
 export const products = [
-  { id: 'runner-black', name: 'رانر أسود', price: 700, tag: 'أكتر واحد بيتطلب' },
-  { id: 'skate-black', name: 'سكيت أسود', price: 650 },
-  { id: 'dunk-navy', name: 'دانك كحلي', price: 600 },
-  { id: 'runner-white', name: 'رانر أبيض', price: null },
-  { id: 'skate-brown', name: 'سكيت بني منقوش', price: 650 },
-  { id: 'dunk-cream', name: 'دانك كريمي', price: null },
-]
-
-// صور حقيقية قدام المراية
-export const realShots = [
-  { src: '/products/real-black.jpg', alt: 'رانر أسود' },
-  { src: '/products/real-green.jpg', alt: 'سكيت أخضر غامق منقوش' },
-  { src: '/products/real-white.jpg', alt: 'رانر أبيض' },
-  { src: '/products/real-brown.jpg', alt: 'سكيت بني منقوش' },
-  { src: '/products/real-color.jpg', alt: 'كوتشي ملوّن' },
+  { id: 'sh-01', name: "Nike Air Force 1 07" },
+  { id: 'sh-02', name: "Air Jordan 1 Mid" },
+  { id: 'sh-03', name: "Air Jordan 1 Low" },
+  { id: 'sh-04', name: "Air Jordan 4" },
+  { id: 'sh-05', name: "Nike Dunk Low" },
+  { id: 'sh-06', name: "Nike SB Dunk" },
+  { id: 'sh-07', name: "Nike Air Max 90" },
+  { id: 'sh-08', name: "Nike Air Max 270" },
+  { id: 'sh-09', name: "Nike Air Max Plus TN" },
+  { id: 'sh-10', name: "Nike M2K Tekno" },
+  { id: 'sh-11', name: "Nike Shox" },
+  { id: 'sh-12', name: "Nike Cortez" },
+  { id: 'sh-13', name: "Yeezy Boost 350" },
+  { id: 'sh-14', name: "Yeezy 700" },
+  { id: 'sh-15', name: "adidas Superstar" },
+  { id: 'sh-16', name: "adidas Samba OG" },
+  { id: 'sh-17', name: "adidas Samba Jane" },
+  { id: 'sh-18', name: "adidas Gazelle Indoor" },
+  { id: 'sh-19', name: "adidas Campus 00s" },
+  { id: 'sh-20', name: "adidas Handball Spezial" },
+  { id: 'sh-21', name: "adidas SL 72" },
+  { id: 'sh-22', name: "adidas Ultraboost 5X" },
+  { id: 'sh-23', name: "adidas Adizero EVO SL" },
+  { id: 'sh-24', name: "adidas ZX 750" },
+  { id: 'sh-25', name: "adidas Response CL" },
+  { id: 'sh-26', name: "Alexander McQueen Oversized" },
+  { id: 'sh-27', name: "New Balance 530" },
+  { id: 'sh-28', name: "New Balance 9060" },
+  { id: 'sh-29', name: "New Balance 327" },
+  { id: 'sh-30', name: "New Balance 2002R" },
+  { id: 'sh-31', name: "New Balance 1906R" },
+  { id: 'sh-32', name: "Puma Suede XL" },
+  { id: 'sh-33', name: "Puma Speedcat OG" },
+  { id: 'sh-34', name: "Vans Knu Skool" },
+  { id: 'sh-35', name: "Asics Gel-Kayano 14" },
+  { id: 'sh-36', name: "Asics Gel-Quantum 360 VII" },
+  { id: 'sh-37', name: "Asics Gel-1130" },
+  { id: 'sh-38', name: "Onitsuka Tiger Mexico 66" },
+  { id: 'sh-39', name: "On Cloudmonster 2" },
+  { id: 'sh-40', name: "Hoka Skyline Float X" },
+  { id: 'sh-41', name: "Golden Goose Super-Star" },
+  { id: 'sh-42', name: "Reebok Classic Leather Legacy" },
+  { id: 'sh-43', name: "Skechers Slip-Ins Go Walk - Max Cushioning" },
+  { id: 'sh-44', name: "UGG Classic Ultra Mini Boot" },
+  { id: 'sh-45', name: "UGG Classic Ultra Mini Platform" },
+  { id: 'sh-46', name: "UGG Mini Bailey Bow II" },
+  { id: 'sh-47', name: "UGG Platform Zipper Ankle Boot" },
+  { id: 'sh-48', name: "Timberland GreenStride Motion 6 Mid" },
+  { id: 'sh-49', name: "UGG Tasman II Slipper" },
+  { id: 'sh-50', name: "UGG Tazz Slipper" },
 ]
 
 export const perks = [
@@ -65,5 +98,3 @@ export const faqs = [
     a: 'ابعتلنا على واتساب في خلال ١٤ يوم من يوم ما تستلم. لو الكوتشي نضيف ومتلبسش برّه، هنبدّلهولك.',
   },
 ]
-
-export const minPrice = Math.min(...products.filter((p) => p.price).map((p) => p.price))

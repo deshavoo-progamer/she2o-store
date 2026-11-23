@@ -3,7 +3,6 @@ import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import Perks from './components/Perks.jsx'
 import Products from './components/Products.jsx'
-import RealShots from './components/RealShots.jsx'
 import SizeGuide from './components/SizeGuide.jsx'
 import Faq from './components/Faq.jsx'
 import Footer from './components/Footer.jsx'
@@ -67,7 +66,6 @@ function Storefront() {
         <Hero />
         <Perks cairoFree={cairoFree} />
         <Products products={store?.products} error={error} add={addToCart} />
-        <RealShots />
         <div className="shell help-grid">
           <SizeGuide />
           <Faq />

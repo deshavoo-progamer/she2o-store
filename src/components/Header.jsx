@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 const links = [
   { href: '/#models', label: 'الموديلات' },
-  { href: '/#real', label: 'صور على الطبيعة' },
   { href: '/#sizes', label: 'اعرف مقاسك' },
   { href: '/#faq', label: 'عندك سؤال؟' },
 ]

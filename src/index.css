@@ -454,6 +454,32 @@ body {
   color: var(--paper);
 }
 
+.model-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 145px), 1fr));
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.model-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 0.75rem;
+}
+
+.model-gallery p {
+  margin: 0.5rem 0 0;
+  text-align: center;
+}
+
+.model-gallery-toggle {
+  cursor: pointer;
+}
+
 .real-gallery {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
